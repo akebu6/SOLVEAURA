@@ -16,6 +16,6 @@ jobs:
     - uses: EddieHubCommunity/gh-action-open-source-labels@main
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        owner-name: 'akebu6'
-        repository-name: 'FYP'
-        force: true # optional to clear existing labels, default to true
+        owner-name: ${{ github.repository_owner }}
+        repository-name: ${{ github.event.repository.FYP }}
+        # force: true # optional to clear existing labels, default to true
