@@ -18,5 +18,4 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         owner-name: 'akebu6'
         repository-name: 'FYP'
-        # force: true # optional to clear existing labels, default to true
-        
+        force: true # optional to clear existing labels, default to true
