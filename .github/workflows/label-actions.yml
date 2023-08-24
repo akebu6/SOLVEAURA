@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v3
       with:
         node-version: '14'
-    - uses: EddieHubCommunity/gh-action-open-source-labels@main
+    - uses: actions/labeler@v4
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        owner-name: ${{ github.repository_owner }}
-        repository-name: ${{ github.event.repository.FYP }}
+        owner-name: 'akebu6'
+        repository-name: 'FYP'
         # force: true # optional to clear existing labels, default to true
