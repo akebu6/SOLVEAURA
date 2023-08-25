@@ -8,8 +8,17 @@ assignees: akebu6
 ---
 
 # Description
+---
+### Research Objectives
+
+### References
+
+## Focus Area
+
+## Challenges
 
 # Checklist
-- [ ]
-- [ ]
-- [ ]
+- [ ] Thorough Research
+- [ ] Added References
+- [ ] Focus Area
+- [ ] Challenges
