@@ -24,4 +24,8 @@ Visually impaired pupils at Lions School for the Visually Impaired do not learn 
 3. **Mathematical Parsing: MathML**
 4. **Transformer Model: GPT-3**
 
+#### Languages
+- **Model Training: Python**
+- **Web Application: Django, Streamlit or Solara**
+
 # References
