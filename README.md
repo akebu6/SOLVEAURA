@@ -6,5 +6,7 @@
 # Teck Stack
 
 # Documentation 
+### Problem Statement
+Visually impaired pupils at Lions School for the Visually Impaired do not learn Mathematics after the ninth grade due to the fact that there are no resourcese to make learning possible. The pupils are also limited by the fact that higher-level Mathematical equations are too complex for the available resources that the school possesses.
 
 # References
