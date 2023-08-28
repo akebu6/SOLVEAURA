@@ -21,14 +21,14 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 
 
 ### Research Objectives
-1. To develop an accessible and comprehensive voice-enabled educational platform
+1. To design an accessible and comprehensive voice-enabled educational platform
 2. To develop an educational application that uses NLP, Speech-to-text and MathML
-3. To evaluate the effective and usability of the application for visually impaired
+3. To evaluate the effective and usability of the application for visually impaired pupils
 
 ### Research Questions
-1. How can 
-2. kjgefj
-3. jehfgr
+1. How can an application that uses voice control be designed?
+2. How can an application that uses NLP, Speech-to-text and MathML be developed?
+3. How can the application's effectiveness and usability be evaluated?
 
 ## Teck Stack
 #### ML Models
