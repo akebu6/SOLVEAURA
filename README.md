@@ -2,6 +2,7 @@
 > Better known as **Solving Operations with a Learning Voice-Enabled Assistance for Understanding and Responsive Auditory** is a project aimed to aid the Visually Impaired in learning Mathematics 
 
 # About
+The aim of this research proposal is to develop and assess the effectiveness of SOLVEAURA, an innovative voice-enabled step-by-step explanation system, designed to empower visually impaired students at Lions School for the Visually Impaired in their pursuit of advanced mathematics education beyond ninth grade. SOLVEAURA seeks to address the unique learning challenges faced by visually impaired students in comprehending complex mathematical concepts, thereby fostering a more inclusive and effective learning environment.
 
 # Documentation 
 ### Problem Statement
