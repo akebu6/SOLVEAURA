@@ -1,11 +1,11 @@
 # S.O.L.V.E.A.U.R.A
 > Better known as **Solving Operations with a Learning Voice-Enabled Assistance for Understanding and Responsive Auditory** is a project aimed to aid the Visually Impaired in learning Mathematics after the ninth grade. 
 
-# About
+# Project Overview
 ---
 The aim of this research proposal is to develop and assess the effectiveness of SOLVEAURA, an innovative voice-enabled step-by-step explanation system, designed to empower visually impaired pupils at Lions School for the Visually Impaired in their pursuit of advanced mathematics education beyond ninth grade. SOLVEAURA seeks to address the unique learning challenges faced by visually impaired pupils in comprehending complex mathematical concepts, thereby fostering a more inclusive and effective learning environment.
 
-# Documentation 
+## Documentation 
 ---
 ### Background
 Mathematics is a crucial foundation for cognitive development and academic success. However, visually impaired pupils face significant challenges when it comes to engaging with mathematical concepts. Traditional educational methods often fall short in accommodating their unique learning needs, hindering their access to advanced mathematics education beyond the ninth grade. Visual impairment impacts the ability to perceive visual representations, making it difficult to understand complex mathematical structures and equations.
@@ -30,7 +30,7 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 2. How can an application that uses NLP, Speech-to-text and MathML be developed?
 3. How can the application's effectiveness and usability be evaluated?
 
-## Teck Stack
+### Teck Stack
 #### ML Models
 1. **Speech Recognition: Google text-to-speech**
 2. **NLP Processing: NLTK or Sci-kit**
