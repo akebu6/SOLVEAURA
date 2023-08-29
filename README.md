@@ -1,5 +1,8 @@
 # S.O.L.V.E.A.U.R.A
-> Better known as **Solving Operations with a Learning Voice-Enabled Assistance for Understanding and Responsive Auditory** is a project aimed to aid the Visually Impaired in learning Mathematics after the ninth grade. 
+> Better known as **Solving Operations with a Learning Voice-Enabled Assistance for Understanding and Responsive Auditory** is a project aimed to aid the Visually Impaired in learning Mathematics after the ninth grade.
+
+#### Side Note
+The readme contains an overview of the project and its documentation. To view the whole project documentation, click [here](https://github.com/akebu6/SOLVEAURA/wiki)
 
 # Project Overview
 ---
