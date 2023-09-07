@@ -19,5 +19,7 @@ from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.navbar, name='navbar'),
     path('', views.home, name='home'),
+    path('', views.footer, name='footer'),
 ]
