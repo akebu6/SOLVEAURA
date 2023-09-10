@@ -45,7 +45,7 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 - **Web Application: Django, Streamlit or Solara**
 - **Database:**
 
-**Side Note: May instead make it a mobile application but that depends on what myb supervisor says.**
+**Side Note: May instead make it a mobile application but that depends on what my supervisor says.**
 
 # References
 To view the references used for the project, click [here](https://github.com/akebu6/SOLVEAURA/wiki/References-List)
