@@ -40,6 +40,10 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 3. **Mathematical Parsing: MathML**
 4. **Transformer Model: GPT-3**
 
+#### Datasets
+1. Huggingface
+2. Clarifai
+
 #### Languages
 - **Model Training: Python**
 - **Web Application: Django, Streamlit or Solara**
