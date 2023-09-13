@@ -49,7 +49,5 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 - **Mobile Application: Flutter or Kotlin with Compose**
 - **Database:**
 
-**Side Note: May instead make it a mobile application but that depends on what my supervisor says.**
-
 # References
 To view the references used for the project, click [here](https://github.com/akebu6/SOLVEAURA/wiki/References-List)
