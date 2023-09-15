@@ -30,7 +30,7 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 
 ### Research Questions
 1. How can an application that uses voice control be designed?
-2. How can an application that uses NLP, Speech-to-text and MathML be developed?
+2. How can an application that uses NLP, Text-to-Speech and MathML be developed?
 3. How can the application's effectiveness and usability be evaluated?
 
 ### Teck Stack
