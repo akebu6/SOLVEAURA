@@ -29,7 +29,7 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 3. To conduct mathematics assessments for visually impaired pupils.
 
 ### Research Questions
-1. How can the application's usability be evaluated?
+1. How can an application that uses NLP, Speech-to-Text and MathML be designed and developed?
 2. How can an application that increases user accessibility be designed?
 3. How can an application that uses NLP, Speech-to-Text and MathML be developed?
 
