@@ -24,8 +24,8 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 
 
 ### Research Objectives
-1. To evaluate usability of the application for visually impaired pupils
-3. To design an educational platform that increases accessibility for visually impaired pupils
+1. To design and develop a mathematics educational application that uses NLP, Speech-to-text and MathML. 
+2. To provide visually impaired pupils a platform to learn Trigonometry.
 3. To develop an educational application that uses NLP, Speech-to-text and MathML
 
 ### Research Questions
