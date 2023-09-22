@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatefulWidget {
-  static const routeName = '/dashboard';
-  const Dashboard({super.key});
+class Home extends StatefulWidget {
+  static const routeName = '/home';
+  const Homed({super.key});
 
   @override
-  State<Dashboard> createState() => _DashboardState();
+  State<Home> createState() => _HomeState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _HomeState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:solveaura/screens/dashboard/Dashboard.dart';
+import 'package:solveaura/ui/pages/home.dart';
 
 final Map<String, WidgetBuilder> routes = {
-  Dashboard.routeName: (_) => const Dashboard(),
+  Home.routeName: (_) => const Home(),
 };

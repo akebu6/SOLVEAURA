@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solveaura/screens/dashboard/Dashboard.dart';
+import 'package:solveaura/ui/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     debugShowMaterialGrid: false,
     title: 'MealMate',
     debugShowCheckedModeBanner: false,
-    home: Dashboard(),
+    home: Home(),
     );
   }
 }
