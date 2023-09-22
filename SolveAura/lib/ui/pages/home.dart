@@ -15,6 +15,22 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('Dashboard'),
       ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: const [
+              Text(
+                'Welcome to SolveAura',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         items: [
