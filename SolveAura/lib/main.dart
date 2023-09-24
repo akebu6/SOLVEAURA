@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
     debugShowMaterialGrid: false,
-    title: 'MealMate',
+    title: 'SolveAura',
     debugShowCheckedModeBanner: false,
     home: Home(),
     );
