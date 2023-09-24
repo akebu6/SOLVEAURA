@@ -12,13 +12,13 @@ class Learn extends StatefulWidget {
 class _LearnState extends State<Learn> {
   final questionOneAnswerController = TextEditingController();
 
-  _Learntate() {
+  _LearnState() {
     AlanVoice.onCommand.add((command) => _handleCommand(command.data));
   }
 
   void _handleCommand(Map<String, dynamic> command) {
     switch (command["command"]) {
-      case "getAnswerOne":
+      case "getName":
         questionOneAnswerController.text = command["data"];
         break;
       default:
@@ -51,12 +51,12 @@ class _LearnState extends State<Learn> {
               return null;
             },
           ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Text('Submit'),
-          ),
+          // ElevatedButton(
+          //   onPressed: () {
+          //     Navigator.pop(context);
+          //   },
+          //   child: Text('Submit'),
+          // ),
         ],
       ),
     );
