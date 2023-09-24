@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+
+import 'package:speech_to_text/speech_recognition_result.dart';
+import 'package:speech_to_text/speech_to_text.dart';
+import 'package:alan_voice/alan_voice.dart';
+
 import 'package:solveaura/ui/pages/learn.dart';
 
 class Home extends StatefulWidget {
@@ -10,6 +15,70 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  _HomeState() {
+    /// Init Alan Button with project key from Alan AI Studio
+    AlanVoice.addButton("7c6bc55a3dbb2c055d0638d63759b11a2e956eca572e1d8b807a3e2338fdd0dc/stage");
+    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
+  }
+
+  void _handleCommand(Map<String, dynamic> command) {
+    switch (command["command"]) {
+      case "forward":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Learn(),
+          ),
+        );
+        break;
+      case "backward":
+        Navigator.pop(context);
+        break;
+      default:
+        debugPrint("Unknown command");
+    }
+  }
+
+  // final speechToText = SpeechToText();
+  // String lastWords = '';
+  //
+  // @override
+  // void initState(){
+  //   super.initState();
+  //   initSpeechToText();
+  // }
+  //
+  // Future<void> initSpeechToText() async {
+  //   await speechToText.initialize(
+  //     onError: (error) => print('Error: $error'),
+  //     onStatus: (status) => print('Status: $status'),
+  //   );
+  //   setState(() {
+  //     speechToText.isListening;
+  //   });
+  // }
+  //
+  // void startListening() async {
+  //   await speechToText.listen(onResult: onSpeechResult);
+  //   setState(() {});
+  // }
+  //
+  // void stopListening() async {
+  //   await speechToText.stop();
+  //   setState(() {});
+  // }
+  //
+  // void onSpeechResult(SpeechRecognitionResult result) {
+  //   setState(() {
+  //     lastWords = result.recognizedWords;
+  //   });
+  // }
+
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  //   speechToText.stop();
+  // }
 
   @override
   Widget build(BuildContext context) {
