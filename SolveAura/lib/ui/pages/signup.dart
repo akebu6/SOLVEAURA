@@ -24,7 +24,7 @@ class Signup extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 80,),
+            SizedBox(height: 50,),
             Padding(
               padding: EdgeInsets.all(20),
               child: Column(
@@ -34,7 +34,7 @@ class Signup extends StatelessWidget {
                       child: Text("Create Account",
                         style: TextStyle(color: Colors.white, fontSize: 40),)
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 5,),
                   FadeInUp(duration: Duration(milliseconds: 1300),
                       child: Text("Welcome to SolveAura",
                         style: TextStyle(color: Colors.white, fontSize: 18),)
@@ -56,7 +56,7 @@ class Signup extends StatelessWidget {
                   padding: EdgeInsets.all(30),
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: 60,),
+                      SizedBox(height: 30,),
                       FadeInUp(duration: Duration(milliseconds: 1400),
                           child: Container(
                             decoration: BoxDecoration(
@@ -135,7 +135,6 @@ class Signup extends StatelessWidget {
                             ),
                           )),
                       SizedBox(height: 40,),
-                      SizedBox(height: 40,),
                       FadeInUp(duration: Duration(milliseconds: 1600),
                           child: MaterialButton(
                             onPressed: () {},
@@ -157,14 +156,14 @@ class Signup extends StatelessWidget {
                                 ),),
                             ),
                           )),
-                      SizedBox(height: 50,),
+                      SizedBox(height: 20,),
                       FadeInUp(duration: Duration(milliseconds: 1800),
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Signup(),
+                                builder: (context) => Login(),
                               ),
                             );
                           },

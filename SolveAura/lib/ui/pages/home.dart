@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:speech_to_text/speech_recognition_result.dart';
-import 'package:speech_to_text/speech_to_text.dart';
+// import 'package:speech_to_text/speech_recognition_result.dart';
+// import 'package:speech_to_text/speech_to_text.dart';
 import 'package:alan_voice/alan_voice.dart';
 
 import 'package:solveaura/ui/pages/learn.dart';
@@ -41,47 +41,6 @@ class _HomeState extends State<Home> {
         debugPrint("Unknown command");
     }
   }
-
-  // final speechToText = SpeechToText();
-  // String lastWords = '';
-  //
-  // @override
-  // void initState(){
-  //   super.initState();
-  //   initSpeechToText();
-  // }
-  //
-  // Future<void> initSpeechToText() async {
-  //   await speechToText.initialize(
-  //     onError: (error) => print('Error: $error'),
-  //     onStatus: (status) => print('Status: $status'),
-  //   );
-  //   setState(() {
-  //     speechToText.isListening;
-  //   });
-  // }
-  //
-  // void startListening() async {
-  //   await speechToText.listen(onResult: onSpeechResult);
-  //   setState(() {});
-  // }
-  //
-  // void stopListening() async {
-  //   await speechToText.stop();
-  //   setState(() {});
-  // }
-  //
-  // void onSpeechResult(SpeechRecognitionResult result) {
-  //   setState(() {
-  //     lastWords = result.recognizedWords;
-  //   });
-  // }
-
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  //   speechToText.stop();
-  // }
 
   @override
   Widget build(BuildContext context) {

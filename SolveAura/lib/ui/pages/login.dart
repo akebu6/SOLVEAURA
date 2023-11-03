@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
                   padding: EdgeInsets.all(30),
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: 60,),
+                      SizedBox(height: 40,),
                       FadeInUp(duration: Duration(milliseconds: 1400),
                           child: Container(
                             decoration: BoxDecoration(
@@ -109,7 +109,7 @@ class Login extends StatelessWidget {
                           child: Text("Forgot Password?",
                             style: TextStyle(color: Colors.grey),)
                       ),
-                      SizedBox(height: 40,),
+                      SizedBox(height: 30,),
                       FadeInUp(duration: Duration(milliseconds: 1600),
                           child: MaterialButton(
                             onPressed: () {
@@ -139,7 +139,7 @@ class Login extends StatelessWidget {
                             ),
                           ),
                       ),
-                      SizedBox(height: 50,),
+                      SizedBox(height: 30,),
                       FadeInUp(duration: Duration(milliseconds: 1800),
                           child: GestureDetector(
                             onTap: () {
@@ -157,7 +157,6 @@ class Login extends StatelessWidget {
                             ),
                           ),
                       ),
-                      SizedBox(height: 30,),
                     ],
                   ),
                 ),
