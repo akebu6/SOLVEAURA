@@ -12,20 +12,6 @@ class Learn extends StatefulWidget {
 class _LearnState extends State<Learn> {
   final questionOneAnswerController = TextEditingController();
 
-  _LearnState() {
-    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
-  }
-
-  void _handleCommand(Map<String, dynamic> command) {
-    switch (command["command"]) {
-      case "getName":
-        questionOneAnswerController.text = command["data"];
-        break;
-      default:
-        debugPrint("Unknown command");
-    }
-  }
-
   @override
   void dispose() {
     questionOneAnswerController.dispose();
