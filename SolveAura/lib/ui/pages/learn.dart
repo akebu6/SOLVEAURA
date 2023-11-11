@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:alan_voice/alan_voice.dart';
 
 class Learn extends StatefulWidget {
   static const routeName = '/learn';
@@ -22,12 +21,13 @@ class _LearnState extends State<Learn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Learn Math'),
+        title: const Text('Learn Math'),
+        backgroundColor: Colors.orange.shade900,
       ),
       body: Column(
         children: [
-          Text('Time to learn some basic Math'),
-          Text('What is 2 * 2 / 2?'),
+          const Text('Time to learn some basic Math'),
+          const Text('What is 2 * 2 / 2?'),
           TextFormField(
             controller: questionOneAnswerController,
             validator: (value) {

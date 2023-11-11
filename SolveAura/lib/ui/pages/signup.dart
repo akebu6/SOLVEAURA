@@ -1,10 +1,11 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import 'package:solveaura/ui/pages/home.dart';
 import 'package:solveaura/ui/pages/login.dart';
 
 class Signup extends StatelessWidget {
+  const Signup({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,28 +25,28 @@ class Signup extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 50,),
+            const SizedBox(height: 50,),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  FadeInUp(duration: Duration(milliseconds: 1000),
-                      child: Text("Create Account",
+                  FadeInUp(duration: const Duration(milliseconds: 1000),
+                      child: const Text("Create Account",
                         style: TextStyle(color: Colors.white, fontSize: 40),)
                   ),
-                  SizedBox(height: 5,),
-                  FadeInUp(duration: Duration(milliseconds: 1300),
-                      child: Text("Welcome to SolveAura",
+                  const SizedBox(height: 5,),
+                  FadeInUp(duration: const Duration(milliseconds: 1300),
+                      child: const Text("Welcome to SolveAura",
                         style: TextStyle(color: Colors.white, fontSize: 18),)
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(60),
@@ -53,16 +54,16 @@ class Signup extends StatelessWidget {
                     )
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(30),
+                  padding: const EdgeInsets.all(30),
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: 30,),
-                      FadeInUp(duration: Duration(milliseconds: 1400),
+                      const SizedBox(height: 30,),
+                      FadeInUp(duration: const Duration(milliseconds: 1400),
                           child: Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
-                                boxShadow: [BoxShadow(
+                                boxShadow: const [BoxShadow(
                                     color: Color.fromRGBO(225, 95, 27, .3),
                                     blurRadius: 20,
                                     offset: Offset(0, 10)
@@ -71,13 +72,13 @@ class Signup extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 Container(
-                                  padding: EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border(bottom: BorderSide(
                                           color: Colors.grey.shade200)
                                       )
                                   ),
-                                  child: TextField(
+                                  child: const TextField(
                                     decoration: InputDecoration(
                                         hintText: "Email or Phone number",
                                         hintStyle: TextStyle(color: Colors.grey),
@@ -86,13 +87,13 @@ class Signup extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border(bottom: BorderSide(
                                           color: Colors.grey.shade200)
                                       )
                                   ),
-                                  child: TextField(
+                                  child: const TextField(
                                     decoration: InputDecoration(
                                         hintText: "Username",
                                         hintStyle: TextStyle(color: Colors.grey),
@@ -101,13 +102,13 @@ class Signup extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border(bottom: BorderSide(
                                           color: Colors.grey.shade200)
                                       )
                                   ),
-                                  child: TextField(
+                                  child: const TextField(
                                     obscureText: true,
                                     decoration: InputDecoration(
                                         hintText: "Password",
@@ -117,13 +118,13 @@ class Signup extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border(bottom: BorderSide(
                                           color: Colors.grey.shade200)
                                       )
                                   ),
-                                  child: TextField(
+                                  child: const TextField(
                                     decoration: InputDecoration(
                                         hintText: "Confirm Password",
                                         hintStyle: TextStyle(color: Colors.grey),
@@ -134,8 +135,8 @@ class Signup extends StatelessWidget {
                               ],
                             ),
                           )),
-                      SizedBox(height: 40,),
-                      FadeInUp(duration: Duration(milliseconds: 1600),
+                      const SizedBox(height: 40,),
+                      FadeInUp(duration: const Duration(milliseconds: 1600),
                           child: MaterialButton(
                             onPressed: () {},
                             height: 50,
@@ -147,7 +148,7 @@ class Signup extends StatelessWidget {
                             ),
                             // decoration: BoxDecoration(
                             // ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "Signup",
                                 style: TextStyle(
@@ -156,14 +157,14 @@ class Signup extends StatelessWidget {
                                 ),),
                             ),
                           )),
-                      SizedBox(height: 20,),
-                      FadeInUp(duration: Duration(milliseconds: 1800),
+                      const SizedBox(height: 20,),
+                      FadeInUp(duration: const Duration(milliseconds: 1800),
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Login(),
+                                builder: (context) => const Login(),
                               ),
                             );
                           },
@@ -174,7 +175,7 @@ class Signup extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                     ],
                   ),
                 ),

@@ -1,10 +1,46 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
+import 'package:alan_voice/alan_voice.dart';
+
 import 'package:solveaura/ui/pages/home.dart';
 import 'package:solveaura/ui/pages/signup.dart';
+import 'package:solveaura/ui/pages/learn.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  const Login({super.key});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  _LoginState() {
+    _initAlanButton();
+    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
+  }
+
+  void _initAlanButton() {
+    AlanVoice.addButton("7c6bc55a3dbb2c055d0638d63759b11a2e956eca572e1d8b807a3e2338fdd0dc/stage");
+  }
+
+  void _handleCommand(Map<String, dynamic> command) {
+    switch (command["command"]) {
+      case "forward":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Home(),
+          ),
+        );
+        break;
+      case "backward":
+        Navigator.pop(context);
+        break;
+      default:
+        debugPrint("Unknown command");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,28 +60,28 @@ class Login extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 80,),
+            const SizedBox(height: 80,),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  FadeInUp(duration: Duration(milliseconds: 1000),
-                      child: Text("Login",
+                  FadeInUp(duration: const Duration(milliseconds: 1000),
+                      child: const Text("Login",
                         style: TextStyle(color: Colors.white, fontSize: 40),)
                   ),
-                  SizedBox(height: 10,),
-                  FadeInUp(duration: Duration(milliseconds: 1300),
-                      child: Text("Welcome Back",
+                  const SizedBox(height: 10,),
+                  FadeInUp(duration: const Duration(milliseconds: 1300),
+                      child: const Text("Welcome Back",
                         style: TextStyle(color: Colors.white, fontSize: 18),)
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(60),
@@ -53,16 +89,16 @@ class Login extends StatelessWidget {
                     )
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(30),
+                  padding: const EdgeInsets.all(30),
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: 40,),
-                      FadeInUp(duration: Duration(milliseconds: 1400),
+                      const SizedBox(height: 40,),
+                      FadeInUp(duration: const Duration(milliseconds: 1400),
                           child: Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
-                                boxShadow: [BoxShadow(
+                                boxShadow: const [BoxShadow(
                                     color: Color.fromRGBO(225, 95, 27, .3),
                                     blurRadius: 20,
                                     offset: Offset(0, 10)
@@ -71,13 +107,13 @@ class Login extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 Container(
-                                  padding: EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border(bottom: BorderSide(
                                           color: Colors.grey.shade200)
                                       )
                                   ),
-                                  child: TextField(
+                                  child: const TextField(
                                     decoration: InputDecoration(
                                         hintText: "Email or Phone number",
                                         hintStyle: TextStyle(color: Colors.grey),
@@ -86,13 +122,13 @@ class Login extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  padding: EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border(bottom: BorderSide(
                                           color: Colors.grey.shade200)
                                       )
                                   ),
-                                  child: TextField(
+                                  child: const TextField(
                                     obscureText: true,
                                     decoration: InputDecoration(
                                         hintText: "Password",
@@ -104,58 +140,58 @@ class Login extends StatelessWidget {
                               ],
                             ),
                           )),
-                      SizedBox(height: 40,),
-                      FadeInUp(duration: Duration(milliseconds: 1500),
-                          child: Text("Forgot Password?",
+                      const SizedBox(height: 40,),
+                      FadeInUp(duration: const Duration(milliseconds: 1500),
+                          child: const Text("Forgot Password?",
                             style: TextStyle(color: Colors.grey),)
                       ),
-                      SizedBox(height: 30,),
-                      FadeInUp(duration: Duration(milliseconds: 1600),
-                          child: MaterialButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Home(),
-                                ),
-                              );
-                            },
-                            height: 50,
-                            // margin: EdgeInsets.symmetric(horizontal: 50),
-                            color: Colors.orange[900],
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50),
-
-                            ),
-                            // decoration: BoxDecoration(
-                            // ),
-                            child: Center(
-                              child: Text(
-                                "Login",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold
-                                ),),
-                            ),
-                          ),
-                      ),
-                      SizedBox(height: 30,),
-                      FadeInUp(duration: Duration(milliseconds: 1800),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Signup(),
-                                ),
-                              );
-                            },
-                            child: Text("Create Account",
-                              style: TextStyle(color: Colors.orange[900],
-                                  fontWeight: FontWeight.bold
+                      const SizedBox(height: 30,),
+                      FadeInUp(duration: const Duration(milliseconds: 1600),
+                        child: MaterialButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Home(),
                               ),
+                            );
+                          },
+                          height: 50,
+                          // margin: EdgeInsets.symmetric(horizontal: 50),
+                          color: Colors.orange[900],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+
+                          ),
+                          // decoration: BoxDecoration(
+                          // ),
+                          child: const Center(
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold
+                              ),),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 30,),
+                      FadeInUp(duration: const Duration(milliseconds: 1800),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Signup(),
+                              ),
+                            );
+                          },
+                          child: Text("Create Account",
+                            style: TextStyle(color: Colors.orange[900],
+                                fontWeight: FontWeight.bold
                             ),
                           ),
+                        ),
                       ),
                     ],
                   ),

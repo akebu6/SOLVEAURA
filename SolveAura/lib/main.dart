@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:solveaura/ui/pages/home.dart';
 import 'package:solveaura/ui/pages/login.dart';
 
 void main() {
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowMaterialGrid: false,
       title: 'SolveAura',
       debugShowCheckedModeBanner: false,
