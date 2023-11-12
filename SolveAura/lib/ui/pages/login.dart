@@ -6,6 +6,10 @@ import 'package:alan_voice/alan_voice.dart';
 import 'package:solveaura/ui/pages/home.dart';
 import 'package:solveaura/ui/pages/signup.dart';
 import 'package:solveaura/ui/pages/learn.dart';
+import 'package:solveaura/ui/pages/support.dart';
+import 'package:solveaura/ui/pages/achievements.dart';
+import 'package:solveaura/ui/pages/profile.dart';
+import 'package:solveaura/ui/pages/tasks.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -26,11 +30,51 @@ class _LoginState extends State<Login> {
 
   void _handleCommand(Map<String, dynamic> command) {
     switch (command["command"]) {
+      case "signup":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Signup(),
+          ),
+        );
+        break;
+      case "tasks":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Tasks(),
+          ),
+        );
+        break;
+      case "achievements":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Achievements(),
+          ),
+        );
+        break;
+      case "profile":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Profile(),
+          ),
+        );
+        break;
       case "forward":
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) => const Home(),
+          ),
+        );
+        break;
+      case "support":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Support(),
           ),
         );
         break;
