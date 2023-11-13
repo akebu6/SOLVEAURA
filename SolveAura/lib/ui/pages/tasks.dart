@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Tasks extends StatefulWidget {
+  static const routeName = '/tasks';
   const Tasks({super.key});
 
   @override

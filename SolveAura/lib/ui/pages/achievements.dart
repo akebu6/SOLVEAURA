@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Achievements extends StatefulWidget {
+  static const routeName = '/achievements';
   const Achievements({super.key});
 
   @override

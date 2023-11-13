@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Support extends StatefulWidget {
+  static const routeName = '/support';
   const Support({super.key});
 
   @override

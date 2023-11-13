@@ -12,6 +12,7 @@ import 'package:solveaura/ui/pages/profile.dart';
 import 'package:solveaura/ui/pages/tasks.dart';
 
 class Login extends StatefulWidget {
+  static const routeName = '/login';
   const Login({super.key});
 
   @override

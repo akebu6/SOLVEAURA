@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:solveaura/ui/pages/login.dart';
 
 class Signup extends StatelessWidget {
+  static const routeName = '/signup';
   const Signup({super.key});
 
 

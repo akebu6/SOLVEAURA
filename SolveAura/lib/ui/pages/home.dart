@@ -8,6 +8,7 @@ import 'package:solveaura/ui/pages/learn.dart';
 import 'package:solveaura/ui/pages/support.dart';
 
 class Home extends StatefulWidget {
+  static const routeName = '/home';
   const Home({super.key});
 
   @override
