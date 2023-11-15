@@ -13,10 +13,10 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
         backgroundColor: Colors.orange.shade900,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           "Under Construction....",
           style: TextStyle(

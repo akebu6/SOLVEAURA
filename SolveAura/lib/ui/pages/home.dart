@@ -50,9 +50,9 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 20,),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(60),
                     topRight: Radius.circular(60)
                   )
@@ -60,6 +60,12 @@ class _HomeState extends State<Home> {
                 child: Padding(
                   padding: const EdgeInsets.all(30),
                   child: GridView(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: 1,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20
+                  ),
                     children: [
                       InkWell(
                         onTap: () {
@@ -69,7 +75,7 @@ class _HomeState extends State<Home> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),color: Colors.red,
                           ),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.assessment,size: 50,color: Colors.white,),
@@ -86,7 +92,7 @@ class _HomeState extends State<Home> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),color: Colors.blue,
                           ),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.star,size: 50,color: Colors.white,),
@@ -103,7 +109,7 @@ class _HomeState extends State<Home> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),color: Colors.green,
                           ),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.person,size: 50,color: Colors.white,),
@@ -119,7 +125,7 @@ class _HomeState extends State<Home> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),color: Colors.purple,
                           ),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.book,size: 50,color: Colors.white,),
@@ -135,7 +141,7 @@ class _HomeState extends State<Home> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),color: Colors.yellow,
                           ),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.support,size: 50,color: Colors.white,),
@@ -144,12 +150,6 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ],
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 1,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20
-                  ),
                  ),
                 ),
               ),

@@ -13,10 +13,10 @@ class _SupportState extends State<Support> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Support'),
+        title: const Text('Support'),
         backgroundColor: Colors.orange.shade900,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
             "Under Construction....",
             style: TextStyle(

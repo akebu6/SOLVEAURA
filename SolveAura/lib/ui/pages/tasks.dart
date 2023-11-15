@@ -13,10 +13,10 @@ class _TasksState extends State<Tasks> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tasks'),
+        title: const Text('Tasks'),
         backgroundColor: Colors.orange.shade900,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
             "Under Construction....",
             style: TextStyle(

@@ -13,10 +13,10 @@ class _AchievementsState extends State<Achievements> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Achievements'),
+        title: const Text('Achievements'),
         backgroundColor: Colors.orange.shade900,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
             "Under Construction....",
             style: TextStyle(
