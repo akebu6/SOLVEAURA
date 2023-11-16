@@ -1,8 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:solveaura/ui/pages/login.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/get_instance.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:solveaura/ui/pages/home.dart';
+import 'package:solveaura/ui/User/login/login.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
@@ -13,11 +18,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowMaterialGrid: false,
+    return GetMaterialApp(
       title: 'SolveAura',
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+        useMaterial3: true,
+      ),
+      home: const Login(),
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:solveaura/ui/pages/tasks.dart';
 import 'package:solveaura/ui/pages/achievements.dart';
-import 'package:solveaura/ui/pages/profile.dart';
+import 'package:solveaura/ui/User/profile/user_profile.dart';
 import 'package:solveaura/ui/pages/learn.dart';
 import 'package:solveaura/ui/pages/support.dart';
 
@@ -103,7 +103,7 @@ class _HomeState extends State<Home> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const Profile()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const UserProfile()));
                         },
                         child: Container(
                           decoration: BoxDecoration(

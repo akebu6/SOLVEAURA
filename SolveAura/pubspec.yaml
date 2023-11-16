@@ -39,6 +39,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   animate_do: ^3.0.2
   firebase_core: ^2.22.0
+  firebase_auth: ^4.14.0
+  flutter_config: ^2.0.2
+  get: ^4.6.5
+  firebase_database: ^10.3.4
+  flutter_session_manager: ^1.0.3
 
 dev_dependencies:
   flutter_test:
