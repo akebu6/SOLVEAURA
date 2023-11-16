@@ -31,7 +31,7 @@ class _UserProfileState extends State<UserProfile> {
       appBar: AppBar(
         toolbarHeight: 120,
         iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrangeAccent,
         title: const Text(
           'Profile',
           style: TextStyle(
@@ -78,7 +78,7 @@ class _UserProfileState extends State<UserProfile> {
               return const Center(
                   child: CircularProgressIndicator(
                     strokeWidth: 2.0,
-                    valueColor: AlwaysStoppedAnimation(Colors.orange),
+                    valueColor: AlwaysStoppedAnimation(Colors.deepOrangeAccent),
                   )
               );
             }

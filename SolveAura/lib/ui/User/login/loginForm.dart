@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:alan_voice/alan_voice.dart';
 import 'package:solveaura/ui/User/controllers/auth/firebase_auth_services.dart';
+
+import 'package:solveaura/ui/User/signup/signup.dart';
+import 'package:solveaura/ui/pages/achievements.dart';
+import 'package:solveaura/ui/pages/home.dart';
+import 'package:solveaura/ui/pages/support.dart';
+import 'package:solveaura/ui/pages/tasks.dart';
+import 'package:solveaura/ui/User/profile/profile.dart';
 
 // This is the Login Form Widget
 class LoginForm extends StatefulWidget {
@@ -11,6 +19,74 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
+  _LoginFormState() {
+    _initAlanButton();
+    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
+  }
+
+  void _initAlanButton() {
+    AlanVoice.addButton("7c6bc55a3dbb2c055d0638d63759b11a2e956eca572e1d8b807a3e2338fdd0dc/stage");
+  }
+
+  void _handleCommand(Map<String, dynamic> command) {
+    switch (command["command"]) {
+      case "signup":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const SignUpScreen(),
+          ),
+        );
+        break;
+      case "tasks":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Tasks(),
+          ),
+        );
+        break;
+      case "achievements":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Achievements(),
+          ),
+        );
+        break;
+      case "profile":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const ProfileScreen(),
+          ),
+        );
+        break;
+      case "forward":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Home(),
+          ),
+        );
+        break;
+      case "support":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Support(),
+          ),
+        );
+        break;
+      case "backward":
+        Navigator.pop(context);
+        break;
+      default:
+        debugPrint("Unknown command");
+    }
+  }
+
+
   final controller = Get.put(AuthController());
   String? email1, password1;
   bool _isObscure = true;
@@ -104,7 +180,7 @@ class _LoginFormState extends State<LoginForm> {
                     onPressed: () {},
                     child: const Text(
                       "Forget Password?",
-                      style: TextStyle(color: Colors.orange),
+                      style: TextStyle(color: Colors.deepOrangeAccent),
                     )),
               ),
               SizedBox(
@@ -113,7 +189,7 @@ class _LoginFormState extends State<LoginForm> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      backgroundColor: Colors.orange,
+                      backgroundColor: Colors.deepOrangeAccent,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20))),
                   onPressed: () {

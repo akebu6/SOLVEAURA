@@ -1,13 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
 import 'package:solveaura/ui/User/controllers/auth/firebase_auth_services.dart';
 import 'package:solveaura/ui/User/profile/profile.dart';
 import 'package:solveaura/ui/pages/home.dart';
 import 'package:solveaura/ui/pages/tasks.dart';
-import 'package:solveaura/ui/pages/learn.dart';
 import 'package:solveaura/ui/pages/achievements.dart';
 import 'package:solveaura/ui/pages/support.dart';
 
@@ -78,6 +76,23 @@ class _HomeState extends State<Home> {
                 );
                 // Handle profile item click
               },
+            ),
+            GestureDetector(
+              onTap: () {
+                // Handle dashboard item click
+                Get.to(
+                      () => const Home(),
+                  transition: Transition.rightToLeft,
+                  duration: const Duration(milliseconds: 300),
+                );
+              },
+              child: const ListTile(
+                leading: Icon(
+                  Icons.home,
+                  color: Colors.grey,
+                ),
+                title: Text('Home'),
+              ),
             ),
             const Divider(),
             GestureDetector(
@@ -159,6 +174,20 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            const SizedBox(height: 50,),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  FadeInUp(duration: const Duration(milliseconds: 1300),
+                      child: const Text("Dashboard",
+                        style: TextStyle(color: Colors.white, fontSize: 30),)
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20,),
             Expanded(
               child: Container(
                 decoration: const BoxDecoration(
@@ -214,7 +243,7 @@ class _HomeState extends State<Home> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const UserProfile()));
                         },
                         child: Container(
                           decoration: BoxDecoration(
