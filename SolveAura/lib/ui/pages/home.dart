@@ -10,6 +10,7 @@ import 'package:solveaura/ui/pages/tasks.dart';
 import 'package:solveaura/ui/pages/learn.dart';
 import 'package:solveaura/ui/pages/achievements.dart';
 import 'package:solveaura/ui/pages/support.dart';
+import 'package:solveaura/ui/pages/pre_test/views/home_screen.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -241,6 +242,22 @@ class _HomeState extends State<Home> {
                             children: [
                               Icon(Icons.book,size: 50,color: Colors.white,),
                               Text("Learn",style: TextStyle(color: Colors.white,fontSize: 20),)
+                            ],),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),color: Colors.greenAccent,
+                          ),
+                          child: const Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.quiz,size: 50,color: Colors.white,),
+                              Text("Pre-test",style: TextStyle(color: Colors.white,fontSize: 20),)
                             ],),
                         ),
                       ),

@@ -69,7 +69,7 @@ class AuthController extends GetxController {
           'Phone': Phone,
           'UserType': Usertype,
         });
-        // Get.offAll(()=>const LogingScreen());
+        // Get.offAll(()=>const LoginScreen());
         Get.snackbar("Success", "Sign Up Successfully");
       }).onError((error, stackTrace) {
         if (error.toString().contains("email-already-in-use")) {
