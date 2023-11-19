@@ -36,14 +36,14 @@ final List<MathTopics> mathTopicsList = [
     topicColor: cardColor,
     topicIcon: CupertinoIcons.arrow_2_circlepath,
     topicName: "Geometry",
-    topicQuestions: stateQuestionsList,
+    topicQuestions: geometryQuestionsList,
   ),
   MathTopics(
     id: 2,
     topicColor: cardColor,
     topicIcon: CupertinoIcons.paperplane,
     topicName: "Trigonometry",
-    topicQuestions: navigateQuestionsList,
+    topicQuestions: trigQuestionsList,
   ),
   MathTopics(
     id: 3,
