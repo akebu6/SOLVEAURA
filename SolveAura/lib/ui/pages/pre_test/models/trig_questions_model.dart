@@ -1,12 +1,12 @@
-class StateQuestion {
+class NavigateQuestion {
   final int id;
   final String text;
-  final List<StateOption> options;
+  final List<NavigationsOption> options;
   bool isLocked;
-  StateOption? selectedWiidgetOption;
-  StateOption? correctAnswer;
+  NavigationsOption? selectedWiidgetOption;
+  NavigationsOption? correctAnswer;
 
-  StateQuestion({
+  NavigateQuestion({
     required this.text,
     required this.options,
     this.isLocked = false,
@@ -14,13 +14,14 @@ class StateQuestion {
     required this.id,
     required this.correctAnswer,
   });
-  StateQuestion copyWith() {
-    return StateQuestion(
+
+  NavigateQuestion copyWith() {
+    return NavigateQuestion(
       id: id,
       text: text,
       options: options
           .map((option) =>
-          StateOption(text: option.text, isCorrect: option.isCorrect))
+          NavigationsOption(text: option.text, isCorrect: option.isCorrect))
           .toList(),
       isLocked: isLocked,
       selectedWiidgetOption: selectedWiidgetOption,
@@ -29,164 +30,140 @@ class StateQuestion {
   }
 }
 
-class StateOption {
+class NavigationsOption {
   final String text;
   final bool isCorrect;
 
-  const StateOption({
+  const NavigationsOption({
     required this.text,
     required this.isCorrect,
   });
 }
 
-final stateQuestionsList = [
-  StateQuestion(
+final navigateQuestionsList = [
+  NavigateQuestion(
     text:
-    "I am a simple method to manage state within a StatefulWidget. What am I?",
+    "I am a widget that manages a stack of child widgets and allows for navigating between them. What am I?",
     options: [
-      const StateOption(text: "MobX", isCorrect: false),
-      const StateOption(text: "Bloc", isCorrect: false),
-      const StateOption(text: "setState", isCorrect: true),
-      const StateOption(text: "Riverpod", isCorrect: false),
+      const NavigationsOption(text: "Route", isCorrect: false),
+      const NavigationsOption(text: "Scaffold", isCorrect: false),
+      const NavigationsOption(text: "Navigator", isCorrect: true),
+      const NavigationsOption(text: "PageView", isCorrect: false),
     ],
     id: 0,
-    correctAnswer: const StateOption(text: "setState", isCorrect: true),
+    correctAnswer: const NavigationsOption(text: "Navigator", isCorrect: true),
   ),
-  StateQuestion(
+  NavigateQuestion(
     text:
-    "I am a Flutter package that enables reactive programming and observable state objects. ",
+    " I am a method that removes the current route from the stack and returns to the previous route. What am I?",
     options: [
-      const StateOption(text: "Riverpod", isCorrect: false),
-      const StateOption(text: "Mobx", isCorrect: true),
-      const StateOption(text: "Provider", isCorrect: false),
-      const StateOption(text: "setState", isCorrect: false),
+      const NavigationsOption(text: "Navigator.push()", isCorrect: false),
+      const NavigationsOption(text: "Navigator.pop()", isCorrect: true),
+      const NavigationsOption(
+          text: "Navigator.removeRoute()", isCorrect: false),
+      const NavigationsOption(text: " Route.dispose()", isCorrect: false),
     ],
     id: 1,
-    correctAnswer: const StateOption(text: "Mobx", isCorrect: true),
+    correctAnswer:
+    const NavigationsOption(text: "Navigator.pop()", isCorrect: true),
   ),
-  StateQuestion(
+  NavigateQuestion(
     text:
-    "What is the name of the Flutter state management approach that uses a widget tree to hold the app state and update the UI, and is similar to Provider?",
+    "I am a widget property that must be passed to navigation methods like Navigator.push() to specify the next screen. What am I?",
     options: [
-      const StateOption(text: "Riverpod", isCorrect: true),
-      const StateOption(text: "Bloc", isCorrect: false),
-      const StateOption(text: "Redux", isCorrect: false),
-      const StateOption(text: "Mobx", isCorrect: false),
+      const NavigationsOption(text: "context", isCorrect: true),
+      const NavigationsOption(text: "Scaffold", isCorrect: false),
+      const NavigationsOption(text: "State", isCorrect: false),
+      const NavigationsOption(text: "Build", isCorrect: false),
     ],
     id: 2,
-    correctAnswer: const StateOption(text: "Riverpod", isCorrect: true),
+    correctAnswer: const NavigationsOption(text: "context", isCorrect: true),
   ),
 
-  StateQuestion(
+  NavigateQuestion(
     text:
-    "I am a lightweight and powerful solution for Flutter, combining state management and dependency injection. What am I?",
+    " I am the method that closes all routes in the history stack to pop to the first route. What am I?",
     options: [
-      const StateOption(text: "Getx", isCorrect: true),
-      const StateOption(text: "Riverpod", isCorrect: false),
-      const StateOption(text: "Redux", isCorrect: false),
-      const StateOption(text: "Get_it", isCorrect: false),
+      const NavigationsOption(text: "Navigator.popUntil()", isCorrect: true),
+      const NavigationsOption(text: " Navigator.reset()", isCorrect: false),
+      const NavigationsOption(text: " Navigator.exitAll()", isCorrect: false),
+      const NavigationsOption(text: "Navigator.clear()", isCorrect: false),
     ],
     id: 3,
-    correctAnswer: const StateOption(text: "Getx", isCorrect: true),
+    correctAnswer:
+    const NavigationsOption(text: "Navigator.popUntil()", isCorrect: true),
   ),
   // other 4
-  StateQuestion(
+  NavigateQuestion(
     text:
-    "I am a feature of ****** that allows developers to navigate between routes without using context. What am I?",
+    " I am a method that adds a named route to the top of the navigator stack. Who am I?",
     options: [
-      const StateOption(text: "Mobx", isCorrect: false),
-      const StateOption(text: "InheritedWidgets", isCorrect: false),
-      const StateOption(text: "Provider", isCorrect: false),
-      const StateOption(text: "Getx", isCorrect: true),
+      const NavigationsOption(text: "Navigator.navigate()", isCorrect: false),
+      const NavigationsOption(text: " Navigator.openRoute()", isCorrect: false),
+      const NavigationsOption(text: " Navigator.routeTo()", isCorrect: false),
+      const NavigationsOption(text: " Navigator.pushNamed()", isCorrect: true),
     ],
     id: 4,
-    correctAnswer: const StateOption(text: "Getx", isCorrect: true),
+    correctAnswer: const NavigationsOption(
+      text: " Navigator.pushNamed()",
+      isCorrect: true,
+    ),
   ),
-  StateQuestion(
-    text: "I use streams and sinks for state management, who am I?",
+  NavigateQuestion(
+    text:
+    " I am a method that replaces the entire route stack with a single route. Who am I?",
     options: [
-      const StateOption(text: "Bloc", isCorrect: true),
-      const StateOption(text: "GetX", isCorrect: false),
-      const StateOption(text: "Provider", isCorrect: false),
-      const StateOption(text: "InheritedWidgets", isCorrect: false),
+      const NavigationsOption(
+          text: " Navigator.pushReplacement()", isCorrect: true),
+      const NavigationsOption(text: "Navigator.reset()", isCorrect: false),
+      const NavigationsOption(
+          text: " Navigator.replaceAll()", isCorrect: false),
+      const NavigationsOption(
+          text: "  Navigator.clearPush()", isCorrect: false),
     ],
     id: 5,
-    correctAnswer: const StateOption(text: "Bloc", isCorrect: true),
+    correctAnswer: const NavigationsOption(
+        text: "Navigator.pushReplacement()", isCorrect: true),
   ),
 
-  StateQuestion(
-    text: "I allow using React-like hooks in Flutter, who am I?",
+  NavigateQuestion(
+    text:
+    "I am a method that closes routes until a condition is met. Who am I?",
     options: [
-      const StateOption(text: "GetX", isCorrect: false),
-      const StateOption(text: "Redux", isCorrect: false),
-      const StateOption(text: "Mobx", isCorrect: false),
-      const StateOption(text: "Hooks", isCorrect: true),
+      const NavigationsOption(text: "Navigator.exitUntil()", isCorrect: false),
+      const NavigationsOption(
+          text: "Navigator.closeAllUntil(),", isCorrect: false),
+      const NavigationsOption(text: "Navigator.popWhile()", isCorrect: false),
+      const NavigationsOption(text: " Navigator.popUntil()", isCorrect: true),
     ],
     id: 6,
-    correctAnswer: const StateOption(text: "Hooks", isCorrect: true),
+    correctAnswer:
+    const NavigationsOption(text: " Navigator.popUntil()", isCorrect: true),
   ),
-  StateQuestion(
+  NavigateQuestion(
     text:
-    "I am a Flutter package that helps manage state by providing a way to handle scoped state. What am I?",
+    "I am an event fired when a route is popped to transition back. Who am I?",
     options: [
-      const StateOption(text: "Scoped Model", isCorrect: true),
-      const StateOption(text: "Flutter Hooks", isCorrect: false),
-      const StateOption(text: "Provider", isCorrect: false),
-      const StateOption(text: "GetX", isCorrect: false),
+      const NavigationsOption(text: "onWillPop", isCorrect: true),
+      const NavigationsOption(text: "onPop", isCorrect: false),
+      const NavigationsOption(text: "didPop", isCorrect: false),
+      const NavigationsOption(text: "popRoute", isCorrect: false),
     ],
     id: 7,
-    correctAnswer: const StateOption(text: "Scoped Model", isCorrect: true),
+    correctAnswer: const NavigationsOption(text: "onWillPop", isCorrect: true),
   ),
 
-  StateQuestion(
+  NavigateQuestion(
     text:
-    " I am the method in a StatefulWidget that is called when the widget is being removed from the widget tree. What am I?",
+    "I am a method that adds a route to the history without removing current. Who am I?",
     options: [
-      const StateOption(text: "initState()", isCorrect: false),
-      const StateOption(text: "onDestroy()", isCorrect: false),
-      const StateOption(text: "dispose()", isCorrect: true),
-      const StateOption(text: "setState()", isCorrect: false),
+      const NavigationsOption(text: "openRoute()", isCorrect: false),
+      const NavigationsOption(text: "onDestroy()", isCorrect: false),
+      const NavigationsOption(text: "Navigator.push()", isCorrect: true),
+      const NavigationsOption(text: "overlayRoute()", isCorrect: false),
     ],
     id: 8,
-    correctAnswer: const StateOption(text: "dispose()", isCorrect: true),
-  ),
-
-  StateQuestion(
-    text:
-    "I am the first thing that happens when a Flutter app is launched. I am called by the Dart VM. What am I?",
-    options: [
-      const StateOption(text: "main()", isCorrect: true),
-      const StateOption(text: "onDestroy()", isCorrect: false),
-      const StateOption(text: "dispose()", isCorrect: false),
-      const StateOption(text: "onCreate()", isCorrect: false),
-    ],
-    id: 9,
-    correctAnswer: const StateOption(text: "main()", isCorrect: true),
-  ),
-
-  StateQuestion(
-    text:
-    "I am called after the main() function. I am responsible for creating the Flutter app's root widget. What am I?",
-    options: [
-      const StateOption(text: "main()", isCorrect: false),
-      const StateOption(text: "runApp()", isCorrect: true),
-      const StateOption(text: "dispose()", isCorrect: false),
-      const StateOption(text: "onCreate()", isCorrect: false),
-    ],
-    id: 10,
-    correctAnswer: const StateOption(text: "runApp()", isCorrect: true),
-  ),
-
-  StateQuestion(
-    text:
-    "I am a method that notifies the framework that the internal state of a StatefulWidget has changed. This triggers a rebuild. What am I?",
-    options: [
-      const StateOption(text: "Provider", isCorrect: false),
-      const StateOption(text: "runApp()", isCorrect: false),
-      const StateOption(text: "setState()", isCorrect: true),
-      const StateOption(text: "onCreate()", isCorrect: false),
-    ],
-    id: 11,
-    correctAnswer: const StateOption(text: "setState()", isCorrect: true),
+    correctAnswer:
+    const NavigationsOption(text: "Navigator.push()", isCorrect: true),
   ),
 ];

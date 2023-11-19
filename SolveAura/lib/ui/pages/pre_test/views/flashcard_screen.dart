@@ -182,26 +182,6 @@ Map<dynamic, dynamic> getRandomQuestionsAndOptions(
   return Map.fromIterables(randomQuestions, randomOptions);
 }
 
-// List<dynamic> getRandomQuestions(List<dynamic> allQuestions, int count) {
-//   if (count >= allQuestions.length) {
-//     return List.from(allQuestions);
-//   }
-//   List<dynamic> randomQuestions = [];
-
-//   List<int> indexes = List.generate(allQuestions.length, (index) => index);
-//   final random = Random();
-
-//   while (randomQuestions.length < count) {
-//     final randomIndex = random.nextInt(indexes.length);
-//     final selectedQuestionIndex = indexes[randomIndex];
-//     final selectedQuestion = allQuestions[selectedQuestionIndex];
-//     randomQuestions.add(selectedQuestion);
-
-//     indexes.removeAt(randomIndex);
-//   }
-//   return randomQuestions;
-// }
-
 void _swipe(int index, AppinioSwiperDirection direction) {
   print("the card was swiped to the: ${direction.name}");
   print(index);

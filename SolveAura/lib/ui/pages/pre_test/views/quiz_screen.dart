@@ -108,7 +108,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 Row(
                   children: [
                     Text(
-                      "${widget.topicType} Riddles",
+                      "${widget.topicType} Questions",
                       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                           color: Colors.white,
                           fontSize: 20,
