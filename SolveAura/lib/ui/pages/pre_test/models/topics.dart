@@ -29,7 +29,7 @@ final List<MathTopics> mathTopicsList = [
     topicColor: cardColor,
     topicIcon: CupertinoIcons.square_stack_3d_up,
     topicName: "Algebra",
-    topicQuestions: widgetQuestionsList,
+    topicQuestions: algebraQuestionsList,
   ),
   MathTopics(
     id: 1,
