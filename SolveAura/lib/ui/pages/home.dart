@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        centerTitle: true,
+        centerTitle: false,
       ),
       drawer: Drawer(
         backgroundColor: Colors.white,
@@ -165,8 +165,8 @@ class _HomeState extends State<Home> {
                 decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(60),
-                        topRight: Radius.circular(60)
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30)
                     )
                 ),
                 child: Padding(
@@ -179,40 +179,6 @@ class _HomeState extends State<Home> {
                         mainAxisSpacing: 20
                     ),
                     children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const Tasks()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),color: Colors.red,
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.assessment,size: 50,color: Colors.white,),
-                              Text("Tasks",style: TextStyle(color: Colors.white,fontSize: 20),)
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const Achievements()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),color: Colors.blue,
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.star,size: 50,color: Colors.white,),
-                              Text("Achievements",style: TextStyle(color: Colors.white, fontSize: 20),)
-                            ],
-                          ),
-                        ),
-                      ),
                       InkWell(
                         onTap: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
@@ -258,22 +224,6 @@ class _HomeState extends State<Home> {
                             children: [
                               Icon(Icons.quiz,size: 50,color: Colors.white,),
                               Text("Pre-test",style: TextStyle(color: Colors.white,fontSize: 20),)
-                            ],),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const Support()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),color: Colors.yellow,
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.support,size: 50,color: Colors.white,),
-                              Text("Support",style: TextStyle(color: Colors.white,fontSize: 20),)
                             ],),
                         ),
                       ),

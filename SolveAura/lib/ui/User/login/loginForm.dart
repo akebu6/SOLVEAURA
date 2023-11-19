@@ -6,8 +6,7 @@ import 'package:solveaura/ui/User/controllers/auth/firebase_auth_services.dart';
 import 'package:solveaura/ui/User/signup/signup.dart';
 import 'package:solveaura/ui/pages/achievements.dart';
 import 'package:solveaura/ui/pages/home.dart';
-import 'package:solveaura/ui/pages/support.dart';
-import 'package:solveaura/ui/pages/tasks.dart';
+import 'package:solveaura/ui/pages/pre_test/views/home_screen.dart';
 import 'package:solveaura/ui/User/profile/profile.dart';
 
 // This is the Login Form Widget
@@ -38,19 +37,11 @@ class _LoginFormState extends State<LoginForm> {
           ),
         );
         break;
-      case "tasks":
+      case "pretest":
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const Tasks(),
-          ),
-        );
-        break;
-      case "achievements":
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const Achievements(),
+            builder: (context) => const HomePage(),
           ),
         );
         break;
@@ -70,14 +61,6 @@ class _LoginFormState extends State<LoginForm> {
           ),
         );
         break;
-      case "support":
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const Support(),
-          ),
-        );
-        break;
       case "backward":
         Navigator.pop(context);
         break;
@@ -85,7 +68,6 @@ class _LoginFormState extends State<LoginForm> {
         debugPrint("Unknown command");
     }
   }
-
 
   final controller = Get.put(AuthController());
   String? email1, password1;
