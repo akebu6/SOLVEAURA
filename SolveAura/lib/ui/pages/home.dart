@@ -165,8 +165,8 @@ class _HomeState extends State<Home> {
                 decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30)
+                        topLeft: Radius.circular(0),
+                        topRight: Radius.circular(0)
                     )
                 ),
                 child: Padding(
