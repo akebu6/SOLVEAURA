@@ -1,5 +1,5 @@
-import 'package:solveaura/ui/pages/pre_test/widgets/dotted_lines.dart';
 import 'package:flutter/material.dart';
+import 'package:solveaura/ui/pages/pre_test/widgets/dotted_lines.dart';
 
 class ResultsCard extends StatelessWidget {
   const ResultsCard({
@@ -48,9 +48,8 @@ class ResultsCard extends StatelessWidget {
                                     .copyWith(fontSize: 12 + ii.toDouble()),
                               ),
                             ],
-                            //m'adamfo(Twi) - my friend
                             TextSpan(
-                              text: "  m'adamfo\n You Scored  \n",
+                              text: "You Scored  \n",
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                             TextSpan(
