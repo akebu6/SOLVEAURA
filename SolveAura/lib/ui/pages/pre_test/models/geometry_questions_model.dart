@@ -42,52 +42,52 @@ class GeometryOption {
 final geometryQuestionsList = [
   GeometryQuestion(
     text:
-    "I am a simple method to manage state within a StatefulWidget. What am I?",
+    "A square pyramid has how many number of faces?",
     options: [
-      const GeometryOption(text: "MobX", isCorrect: false),
-      const GeometryOption(text: "Bloc", isCorrect: false),
-      const GeometryOption(text: "setState", isCorrect: true),
-      const GeometryOption(text: "Riverpod", isCorrect: false),
+      const GeometryOption(text: "8", isCorrect: false),
+      const GeometryOption(text: "6", isCorrect: false),
+      const GeometryOption(text: "7", isCorrect: false),
+      const GeometryOption(text: "5", isCorrect: true),
     ],
     id: 0,
-    correctAnswer: const GeometryOption(text: "setState", isCorrect: true),
+    correctAnswer: const GeometryOption(text: "5", isCorrect: true),
   ),
   GeometryQuestion(
     text:
-    "I am a Flutter package that enables reactive programming and observable state objects. ",
+    "A triangle has the measure of its angles as 70 degrees, 60 degrees, and 70 degrees. What is the type of triangle?",
     options: [
-      const GeometryOption(text: "Riverpod", isCorrect: false),
-      const GeometryOption(text: "Mobx", isCorrect: true),
-      const GeometryOption(text: "Provider", isCorrect: false),
-      const GeometryOption(text: "setState", isCorrect: false),
+      const GeometryOption(text: "Isosceles", isCorrect: false),
+      const GeometryOption(text: "The triangle does not exist", isCorrect: true),
+      const GeometryOption(text: "Scalene", isCorrect: false),
+      const GeometryOption(text: "Equilateral", isCorrect: false),
     ],
     id: 1,
-    correctAnswer: const GeometryOption(text: "Mobx", isCorrect: true),
+    correctAnswer: const GeometryOption(text: "The triangle does not exist", isCorrect: true),
   ),
   GeometryQuestion(
     text:
-    "What is the name of the Flutter state management approach that uses a widget tree to hold the app state and update the UI, and is similar to Provider?",
+    "What is the area of a circle with a diameter of 16?",
     options: [
-      const GeometryOption(text: "Riverpod", isCorrect: true),
-      const GeometryOption(text: "Bloc", isCorrect: false),
-      const GeometryOption(text: "Redux", isCorrect: false),
-      const GeometryOption(text: "Mobx", isCorrect: false),
+      const GeometryOption(text: "16π", isCorrect: false),
+      const GeometryOption(text: "8π", isCorrect: false),
+      const GeometryOption(text: "6π", isCorrect: true),
+      const GeometryOption(text: "128π", isCorrect: false),
     ],
     id: 2,
-    correctAnswer: const GeometryOption(text: "Riverpod", isCorrect: true),
+    correctAnswer: const GeometryOption(text: "64π", isCorrect: true),
   ),
 
   GeometryQuestion(
     text:
-    "I am a lightweight and powerful solution for Flutter, combining state management and dependency injection. What am I?",
+    "What is the sum of the measures of the interior angles of a hexagon?",
     options: [
-      const GeometryOption(text: "Getx", isCorrect: true),
-      const GeometryOption(text: "Riverpod", isCorrect: false),
-      const GeometryOption(text: "Redux", isCorrect: false),
-      const GeometryOption(text: "Get_it", isCorrect: false),
+      const GeometryOption(text: "540°", isCorrect: false),
+      const GeometryOption(text: "810°", isCorrect: false),
+      const GeometryOption(text: "1080°", isCorrect: false),
+      const GeometryOption(text: "720°", isCorrect: true),
     ],
     id: 3,
-    correctAnswer: const GeometryOption(text: "Getx", isCorrect: true),
+    correctAnswer: const GeometryOption(text: "720°", isCorrect: true),
   ),
   // other 4
 ];
