@@ -50,6 +50,6 @@ final List<MathTopics> mathTopicsList = [
     topicColor: cardColor,
     topicIcon: CupertinoIcons.rectangle_arrow_up_right_arrow_down_left,
     topicName: "Calculus",
-    topicQuestions: layOutQuestionsList,
+    topicQuestions: calculusQuestionsList,
   ),
 ];
