@@ -43,51 +43,50 @@ class TrigOption {
 final trigQuestionsList = [
   TrigQuestion(
     text:
-    "I am a widget that manages a stack of child widgets and allows for navigating between them. What am I?",
+    "What is the value of sin A if the value of tan A is 4/3?",
     options: [
-      const TrigOption(text: "Route", isCorrect: false),
-      const TrigOption(text: "Scaffold", isCorrect: false),
-      const TrigOption(text: "Navigator", isCorrect: true),
-      const TrigOption(text: "PageView", isCorrect: false),
+      const TrigOption(text: "2/3", isCorrect: false),
+      const TrigOption(text: "2/5", isCorrect: false),
+      const TrigOption(text: "4/5", isCorrect: true),
+      const TrigOption(text: "3/5", isCorrect: false),
     ],
     id: 0,
-    correctAnswer: const TrigOption(text: "Navigator", isCorrect: true),
+    correctAnswer: const TrigOption(text: "4/5r", isCorrect: true),
   ),
   TrigQuestion(
     text:
-    " I am a method that removes the current route from the stack and returns to the previous route. What am I?",
+    "The trigonometric functions are defined in a _______ triangle",
     options: [
-      const TrigOption(text: "Navigator.push()", isCorrect: false),
-      const TrigOption(text: "Navigator.pop()", isCorrect: true),
-      const TrigOption(
-          text: "Navigator.removeRoute()", isCorrect: false),
-      const TrigOption(text: " Route.dispose()", isCorrect: false),
+      const TrigOption(text: "Equiangular", isCorrect: false),
+      const TrigOption(text: "Right angled", isCorrect: true),
+      const TrigOption(text: "Acute angled", isCorrect: false),
+      const TrigOption(text: "Obtuse angled", isCorrect: false),
     ],
     id: 1,
     correctAnswer:
-    const TrigOption(text: "Navigator.pop()", isCorrect: true),
+    const TrigOption(text: "Right angled", isCorrect: true),
   ),
   TrigQuestion(
     text:
-    "I am a widget property that must be passed to navigation methods like Navigator.push() to specify the next screen. What am I?",
+    "The trigonometric function that is defined by the ratio of length of adjacent side over the hypotenuse is known as:",
     options: [
-      const TrigOption(text: "context", isCorrect: true),
-      const TrigOption(text: "Scaffold", isCorrect: false),
-      const TrigOption(text: "State", isCorrect: false),
-      const TrigOption(text: "Build", isCorrect: false),
+      const TrigOption(text: "sine", isCorrect: false),
+      const TrigOption(text: "tangent", isCorrect: false),
+      const TrigOption(text: "cosine", isCorrect: true),
+      const TrigOption(text: "cosecant", isCorrect: false),
     ],
     id: 2,
-    correctAnswer: const TrigOption(text: "context", isCorrect: true),
+    correctAnswer: const TrigOption(text: "cosecant", isCorrect: true),
   ),
 
   TrigQuestion(
     text:
-    " I am the method that closes all routes in the history stack to pop to the first route. What am I?",
+    "What is the reciprocal of secant function?",
     options: [
-      const TrigOption(text: "Navigator.popUntil()", isCorrect: true),
-      const TrigOption(text: " Navigator.reset()", isCorrect: false),
-      const TrigOption(text: " Navigator.exitAll()", isCorrect: false),
-      const TrigOption(text: "Navigator.clear()", isCorrect: false),
+      const TrigOption(text: "sin", isCorrect: false),
+      const TrigOption(text: "tan", isCorrect: false),
+      const TrigOption(text: "cot", isCorrect: false),
+      const TrigOption(text: "cos", isCorrect: true),
     ],
     id: 3,
     correctAnswer:
