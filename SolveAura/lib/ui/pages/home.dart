@@ -1,11 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
 import 'package:solveaura/ui/User/controllers/auth/firebase_auth_services.dart';
 import 'package:solveaura/ui/User/profile/profile.dart';
-import 'package:solveaura/ui/pages/home.dart';
 import 'package:solveaura/ui/pages/tasks.dart';
 import 'package:solveaura/ui/pages/learn.dart';
 import 'package:solveaura/ui/pages/achievements.dart';
@@ -13,6 +11,8 @@ import 'package:solveaura/ui/pages/support.dart';
 import 'package:solveaura/ui/pages/pre_test/views/home_screen.dart';
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   _HomeState createState() => _HomeState();
 }
@@ -20,7 +20,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   DatabaseReference ref = FirebaseDatabase.instance.ref('Users');
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   late User userID;
 
   @override

@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         backgroundColor: Colors.deepOrangeAccent,
         leading: GestureDetector(
-          onTap: () => {Get.to(Home())},
+          onTap: () => {Get.to(const Home())},
           child: const BackButton(
             color: Colors.white,
           ),

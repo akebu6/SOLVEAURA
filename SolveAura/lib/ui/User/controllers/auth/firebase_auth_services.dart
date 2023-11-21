@@ -4,7 +4,6 @@ import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:solveaura/ui/User/profile/user_profile.dart';
 import 'package:solveaura/ui/User/login/login.dart';
 import 'package:solveaura/ui/User/controllers/session_controller.dart';
 import 'package:solveaura/ui/User/controllers/user_id_session.dart';
@@ -165,7 +164,7 @@ class AuthController extends GetxController {
     print("User Type: ${snapshot.value}");
     // let us now check the type of user we have retrieved from the database
     if (snapshot.value == "User") {
-      Get.offAll(() => Home());
+      Get.offAll(() => const Home());
     }
   }
 }

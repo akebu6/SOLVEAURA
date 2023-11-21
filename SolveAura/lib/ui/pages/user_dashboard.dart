@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:solveaura/ui/pages/home.dart';
 
 class UserDashboard extends StatelessWidget {
   const UserDashboard({super.key});

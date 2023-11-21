@@ -4,7 +4,6 @@ import 'package:alan_voice/alan_voice.dart';
 import 'package:solveaura/ui/User/controllers/auth/firebase_auth_services.dart';
 
 import 'package:solveaura/ui/User/signup/signup.dart';
-import 'package:solveaura/ui/pages/achievements.dart';
 import 'package:solveaura/ui/pages/home.dart';
 import 'package:solveaura/ui/pages/pre_test/views/home_screen.dart';
 import 'package:solveaura/ui/User/profile/profile.dart';
@@ -57,7 +56,7 @@ class _LoginFormState extends State<LoginForm> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Home(),
+            builder: (context) => const Home(),
           ),
         );
         break;
@@ -89,10 +88,10 @@ class _LoginFormState extends State<LoginForm> {
               TextFormField(
                 controller: controller.emailController,
                 validator: (value) {
-                  bool _isEmailValid = RegExp(
+                  bool isEmailValid = RegExp(
                       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                       .hasMatch(value!);
-                  if (!_isEmailValid) {
+                  if (!isEmailValid) {
                     return 'invalid email';
                   }
                   // return null if email is valid

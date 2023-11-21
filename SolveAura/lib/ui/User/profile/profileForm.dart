@@ -1,8 +1,6 @@
-import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:get/get.dart';
@@ -24,7 +22,7 @@ class _ProfileFormState extends State<ProfileForm> {
 
   @override
   Widget build(BuildContext context) {
-    final _formkey = GlobalKey<FormState>();
+    final formkey = GlobalKey<FormState>();
     String userEmail;
     final user = FirebaseAuth.instance.currentUser;
 
@@ -42,7 +40,7 @@ class _ProfileFormState extends State<ProfileForm> {
               userEmail = map["email"].toString();
 
               return Form(
-                key: _formkey,
+                key: formkey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -83,10 +81,10 @@ class _ProfileFormState extends State<ProfileForm> {
                       controller: phoneController,
 
                       validator: (value) {
-                        bool _isEmailValid =
+                        bool isEmailValid0 =
                         RegExp(r'^(?:[+0][1-9])?[0-9]{8,15}$')
                             .hasMatch(value!);
-                        if (!_isEmailValid) {
+                        if (!isEmailValid0) {
                           return 'Invalid phone number';
                         }
                         return null;
@@ -135,7 +133,7 @@ class _ProfileFormState extends State<ProfileForm> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20))),
                         onPressed: () {
-                          if ((_formkey.currentState)!.validate()) {
+                          if ((formkey.currentState)!.validate()) {
                             updateprofile(
                                 nameController.text.trim(),
                                 phoneController.text.trim());
@@ -189,8 +187,8 @@ class _ProfileFormState extends State<ProfileForm> {
 
   // this function to update user profile
   void updateprofile(String name, String phone) {
-    FirebaseAuth _auth = FirebaseAuth.instance;
-    User user = _auth.currentUser!;
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User user = auth.currentUser!;
     UserIDSession userIDSession = UserIDSession();
     userIDSession.saveUserID("userID", user.uid);
 

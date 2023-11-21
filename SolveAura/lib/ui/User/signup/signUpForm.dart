@@ -33,23 +33,23 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final _formkey = GlobalKey<FormState>();
+    final formkey = GlobalKey<FormState>();
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 30 - 10),
       child: Form(
-        key: _formkey,
+        key: formkey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
               controller: controller.fullName,
               validator: (value) {
-                bool _isNameValid = RegExp(r'^[a-zA-Z ]+$').hasMatch(value!);
-                if (value == null || value.trim().isEmpty) {
+                bool isNameValid = RegExp(r'^[a-zA-Z ]+$').hasMatch(value!);
+                if (value.trim().isEmpty) {
                   return 'This field is required';
                 }
-                if (!_isNameValid) {
+                if (!isNameValid) {
                   return 'Name must be valid and contain only alphabets';
                 }
                 if (value.trim().length < 2) {
@@ -70,10 +70,10 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             TextFormField(
               controller: controller.email,
               validator: (value) {
-                bool _isEmailValid = RegExp(
+                bool isEmailValid = RegExp(
                     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                     .hasMatch(value!);
-                if (!_isEmailValid) {
+                if (!isEmailValid) {
                   return 'Invalid email.';
                 }
                 return null;
@@ -90,9 +90,9 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             TextFormField(
               controller: controller.phoneNo,
               validator: (value) {
-                bool _isEmailValid =
+                bool isEmailValid =
                 RegExp(r'^(?:[+0][1-9])?[0-9]{8,15}$').hasMatch(value!);
-                if (!_isEmailValid) {
+                if (!isEmailValid) {
                   return 'Invalid phone number';
                 }
                 return null;
@@ -205,7 +205,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
                                     child: Text("Terms & Conditions")),
                                 insetPadding: const EdgeInsets.symmetric(
                                     horizontal: 13, vertical: 10),
-                                titleTextStyle: TextStyle(
+                                titleTextStyle: const TextStyle(
                                     color: Colors.deepOrangeAccent,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
@@ -282,7 +282,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
                                               } else {
                                                 Navigator.of(context)
                                                     .pop(AlertDialog);
-                                                if (_formkey.currentState!
+                                                if (formkey.currentState!
                                                     .validate()) {
                                                   AuthController.instance
                                                       .signUp(

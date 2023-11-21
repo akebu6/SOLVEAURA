@@ -1,4 +1,3 @@
-import 'package:flutter_session_manager/flutter_session_manager.dart';
 
 class SessionController {
   static final SessionController _session = SessionController._internal();
@@ -9,5 +8,5 @@ class SessionController {
     return _session;
   }
 
-  SessionController._internal() {}
+  SessionController._internal();
 }
