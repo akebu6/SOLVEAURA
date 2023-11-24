@@ -32,6 +32,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     String userName = "";
+    Color shadowColor = Theme.of(context).colorScheme.shadow;
+    Color surfaceTint = Theme.of(context).colorScheme.primary;
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 100,
@@ -145,95 +147,335 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      body: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                colors: [
-                  Colors.orange.shade900,
-                  Colors.orange.shade800,
-                  Colors.orange.shade400,
-                ]
-            )
-        ),
-        child: Column(
+      body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
-              child: Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(0),
-                        topRight: Radius.circular(0)
-                    )
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(30),
-                  child: GridView(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 1,
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 20
+                child: ListView(
+                  children: [
+                    // Container(
+                    //   height: 100,
+                    //     child: Stack(
+                    //       children: [
+                    //         Positioned(
+                    //           top: 10,
+                    //           left: 20,
+                    //           right: 20,
+                    //           child: Material(
+                    //           borderRadius: BorderRadius.circular(20),
+                    //           color: Colors.white,
+                    //           shadowColor: shadowColor,
+                    //           surfaceTintColor: surfaceTint,
+                    //           type: MaterialType.card,
+                    //           elevation: 10,
+                    //           child: const SizedBox(
+                    //             width: 400,
+                    //             child: Center(
+                    //               child: Text(
+                    //                 "Welcome to SolveAura",
+                    //                 style: TextStyle(
+                    //                   fontSize: 24,
+                    //                   fontWeight: FontWeight.bold,
+                    //                 ),
+                    //               ),
+                    //             ),
+                    //           ),
+                    //         ),)
+                    //       ],
+                    //     ),
+                    //   ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(
+                          const HomePage(),
+                          transition: Transition.rightToLeft,
+                          duration: const Duration(milliseconds: 300),
+                        );
+                      },
+                      child: Container(
+                        height: 230,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              top: 40,
+                              right: 20,
+                              left: 20,
+                              child: Material(
+                                child: Container(
+                                  height: 180,
+                                  width: MediaQuery.of(context).size.width,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.5),
+                                          blurRadius: 20.0,
+                                          offset: const Offset(-10.0, 10.0),
+                                          spreadRadius: 4.0
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 0,
+                              left: 30,
+                              child: Card(
+                                elevation: 10,
+                                shadowColor: Colors.grey.withOpacity(0.5),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    image: const DecorationImage(
+                                      image: AssetImage("assets/researching.png"),
+                                      fit: BoxFit.scaleDown,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                                top: 60,
+                                left: 200,
+                                child: Container(
+                                  height: 150,
+                                  width: 160,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Pretest",
+                                        style: TextStyle(
+                                            fontSize: 24, fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        "Test your knowledge",
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.bold)
+                                        ,
+                                      ),
+                                      Divider(color: Colors.grey,),
+                                      Text(
+                                        "Pass the pretest to unlock the course",
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.bold)
+                                        ,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),color: Colors.green,
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.person,size: 50,color: Colors.white,),
-                              Text("Profile",style: TextStyle(color: Colors.white,fontSize: 20),)
-                            ],),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(
+                          const Learn(),
+                          transition: Transition.rightToLeft,
+                          duration: const Duration(milliseconds: 300),
+                        );
+                      },
+                      child: Container(
+                        height: 230,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              top: 40,
+                              right: 20,
+                              left: 20,
+                              child: Material(
+                                child: Container(
+                                  height: 180,
+                                  width: MediaQuery.of(context).size.width,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.5),
+                                          blurRadius: 20.0,
+                                          offset: const Offset(-10.0, 10.0),
+                                          spreadRadius: 4.0
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 0,
+                              left: 30,
+                              child: Card(
+                                elevation: 10,
+                                shadowColor: Colors.grey.withOpacity(0.5),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    image: const DecorationImage(
+                                      image: AssetImage("assets/boy_illustration.png"),
+                                      fit: BoxFit.scaleDown,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                                top: 60,
+                                left: 200,
+                                child: Container(
+                                  height: 150,
+                                  width: 160,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Learn",
+                                        style: TextStyle(
+                                            fontSize: 24, fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        "Unlock new knowledge",
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.bold)
+                                        ,
+                                      ),
+                                      Divider(color: Colors.grey,),
+                                      Text(
+                                        "Dive into the world of learning",
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.bold)
+                                        ,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                            ),
+                          ],
                         ),
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const Learn()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),color: Colors.purple,
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.book,size: 50,color: Colors.white,),
-                              Text("Learn",style: TextStyle(color: Colors.white,fontSize: 20),)
-                            ],),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(
+                          const ProfileScreen(),
+                          transition: Transition.rightToLeft,
+                          duration: const Duration(milliseconds: 300),
+                        );
+                      },
+                      child: Container(
+                        height: 230,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              top: 40,
+                              right: 20,
+                              left: 20,
+                              child: Material(
+                                child: Container(
+                                  height: 180,
+                                  width: MediaQuery.of(context).size.width,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.5),
+                                          blurRadius: 20.0,
+                                          offset: const Offset(-10.0, 10.0),
+                                          spreadRadius: 4.0
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 0,
+                              left: 30,
+                              child: Card(
+                                elevation: 10,
+                                shadowColor: Colors.grey.withOpacity(0.5),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    image: const DecorationImage(
+                                      image: AssetImage("assets/profile.png"),
+                                      fit: BoxFit.scaleDown
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                                top: 60,
+                                left: 200,
+                                child: Container(
+                                  height: 150,
+                                  width: 160,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Profile",
+                                        style: TextStyle(
+                                            fontSize: 24, fontWeight: FontWeight.bold),
+                                      ),
+                                      // Text(
+                                      //   "Test your knowledge",
+                                      //   style: TextStyle(
+                                      //       fontSize: 16,
+                                      //       color: Colors.grey,
+                                      //       fontWeight: FontWeight.bold)
+                                      //   ,
+                                      // ),
+                                      Divider(color: Colors.grey,),
+                                      Text(
+                                        "Edit or update your profile",
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.bold)
+                                        ,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                            ),
+                          ],
                         ),
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),color: Colors.greenAccent,
-                          ),
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.quiz,size: 50,color: Colors.white,),
-                              Text("Pre-test",style: TextStyle(color: Colors.white,fontSize: 20),)
-                            ],),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ),
             ),
           ],
-        ),
       ),
     );
   }

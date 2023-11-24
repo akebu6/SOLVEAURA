@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Pretest'),
-        backgroundColor: bgColor3,
+        // backgroundColor: bgColor3,
       ),
       backgroundColor: bgColor3,
       body: SafeArea(
