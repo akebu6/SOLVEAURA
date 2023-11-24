@@ -46,6 +46,8 @@ dependencies:
   flutter_session_manager: ^1.0.3
   flip_card: ^0.7.0
   appinio_swiper: ^2.0.3
+  math_expressions: ^2.4.0
+  flutter_tex: ^4.0.3+4
 
 dev_dependencies:
   flutter_test:

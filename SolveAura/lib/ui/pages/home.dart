@@ -192,7 +192,7 @@ class _HomeState extends State<Home> {
                           duration: const Duration(milliseconds: 300),
                         );
                       },
-                      child: Container(
+                      child: SizedBox(
                         height: 230,
                         child: Stack(
                           children: [
@@ -241,10 +241,10 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
-                            Positioned(
+                            const Positioned(
                                 top: 60,
                                 left: 200,
-                                child: Container(
+                                child: SizedBox(
                                   height: 150,
                                   width: 160,
                                   child: Column(
@@ -288,7 +288,7 @@ class _HomeState extends State<Home> {
                           duration: const Duration(milliseconds: 300),
                         );
                       },
-                      child: Container(
+                      child: SizedBox(
                         height: 230,
                         child: Stack(
                           children: [
@@ -337,10 +337,10 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
-                            Positioned(
+                            const Positioned(
                                 top: 60,
                                 left: 200,
-                                child: Container(
+                                child: SizedBox(
                                   height: 150,
                                   width: 160,
                                   child: Column(
@@ -384,7 +384,7 @@ class _HomeState extends State<Home> {
                           duration: const Duration(milliseconds: 300),
                         );
                       },
-                      child: Container(
+                      child: SizedBox(
                         height: 230,
                         child: Stack(
                           children: [
@@ -433,10 +433,10 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
-                            Positioned(
+                            const Positioned(
                                 top: 60,
                                 left: 200,
-                                child: Container(
+                                child: SizedBox(
                                   height: 150,
                                   width: 160,
                                   child: Column(
