@@ -48,7 +48,7 @@ The proposed project: SOLVEAURA, aims to leverage the capabilities of voice-enab
 #### Languages
 - **Model Training: Python**
 - **Mobile Application: Flutter or Kotlin with Compose**
-- **Database:**
+- **Database: Firebase Realtime Database**
 
 # References
 To view the references used for the project, click [here](https://github.com/akebu6/SOLVEAURA/wiki/References-List)
