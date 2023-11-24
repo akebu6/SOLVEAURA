@@ -25,24 +25,31 @@ class _LearnState extends State<Learn> {
         backgroundColor: Colors.orange.shade900,
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Time to learn some basic Math'),
-          const Text('What is 2 * 2 / 2?'),
-          TextFormField(
-            controller: questionOneAnswerController,
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter your answer her';
-              }
-              return null;
-            },
+          Expanded(
+            child: ListView(
+              physics: const BouncingScrollPhysics(),
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent.shade700,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.24),
+                        blurRadius: 20.0,
+                        offset: const Offset(0.0, 10.0),
+                        spreadRadius: -10,
+                        blurStyle: BlurStyle.outer,
+                      )
+                    ],
+                  ),
+                  child: Image.asset("assets/learn.png"),
+                ),
+                const SizedBox(height: 5,),
+              ],
+            ),
           ),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.pop(context);
-          //   },
-          //   child: Text('Submit'),
-          // ),
         ],
       ),
     );
