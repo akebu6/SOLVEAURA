@@ -25,7 +25,7 @@ class _LoginFormState extends State<LoginForm> {
   // void _initAlanButton() {
   //   AlanVoice.addButton("7c6bc55a3dbb2c055d0638d63759b11a2e956eca572e1d8b807a3e2338fdd0dc/stage");
   // }
-
+  //
   // void _handleCommand(Map<String, dynamic> command) {
   //   switch (command["command"]) {
   //     case "signup":

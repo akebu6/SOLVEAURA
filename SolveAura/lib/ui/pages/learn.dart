@@ -43,7 +43,7 @@ class _LearnState extends State<Learn> {
               children: [
                 Container(
                   height: 200,
-                  width: 150,
+                  width: 500,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
