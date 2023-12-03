@@ -18,55 +18,55 @@ class LoginForm extends StatefulWidget {
 
 class _LoginFormState extends State<LoginForm> {
   _LoginFormState() {
-    // _initAlanButton();
-    // AlanVoice.onCommand.add((command) => _handleCommand(command.data));
+    _initAlanButton();
+    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
   }
 
-  // void _initAlanButton() {
-  //   AlanVoice.addButton("7c6bc55a3dbb2c055d0638d63759b11a2e956eca572e1d8b807a3e2338fdd0dc/stage");
-  // }
-  //
-  // void _handleCommand(Map<String, dynamic> command) {
-  //   switch (command["command"]) {
-  //     case "signup":
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(
-  //           builder: (context) => const SignUpScreen(),
-  //         ),
-  //       );
-  //       break;
-  //     case "pretest":
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(
-  //           builder: (context) => const HomePage(),
-  //         ),
-  //       );
-  //       break;
-  //     case "profile":
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(
-  //           builder: (context) => const ProfileScreen(),
-  //         ),
-  //       );
-  //       break;
-  //     case "forward":
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(
-  //           builder: (context) => const Home(),
-  //         ),
-  //       );
-  //       break;
-  //     case "backward":
-  //       Navigator.pop(context);
-  //       break;
-  //     default:
-  //       debugPrint("Unknown command");
-  //   }
-  // }
+  void _initAlanButton() {
+    AlanVoice.addButton("7c6bc55a3dbb2c055d0638d63759b11a2e956eca572e1d8b807a3e2338fdd0dc/stage");
+  }
+
+  void _handleCommand(Map<String, dynamic> command) {
+    switch (command["command"]) {
+      case "signup":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const SignUpScreen(),
+          ),
+        );
+        break;
+      case "pretest":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomePage(),
+          ),
+        );
+        break;
+      case "profile":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const ProfileScreen(),
+          ),
+        );
+        break;
+      case "forward":
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Home(),
+          ),
+        );
+        break;
+      case "backward":
+        Navigator.pop(context);
+        break;
+      default:
+        debugPrint("Unknown command");
+    }
+  }
 
   final controller = Get.put(AuthController());
   String? email1, password1;

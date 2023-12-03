@@ -37,30 +37,30 @@ class _LearnState extends State<Learn> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Container(
+            height: 200,
+            width: 500,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              image: const DecorationImage(
+                image: AssetImage("assets/learn_1.png"),
+                fit: BoxFit.scaleDown,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  blurRadius: 20.0,
+                  offset: const Offset(-10.0, 10.0),
+                  spreadRadius: -10,
+                )
+              ],
+            ),
+          ),
           Expanded(
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
-                Container(
-                  height: 200,
-                  width: 500,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    image: const DecorationImage(
-                      image: AssetImage("assets/learn_1.png"),
-                      fit: BoxFit.scaleDown,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.5),
-                        blurRadius: 20.0,
-                        offset: const Offset(-10.0, 10.0),
-                        spreadRadius: -10,
-                      )
-                    ],
-                  ),
-                ),
                 const SizedBox(height: 10,),
                 Center(
                   child: Text(
@@ -134,21 +134,10 @@ class _LearnState extends State<Learn> {
                           ),
                         ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.all(10),
-                      child: TeXView(
-                        renderingEngine: TeXViewRenderingEngine.katex(),
-                        child: TeXViewDocument(
-                          r"""
-                          \lim_{x\to c} f(x) = L
-                          """,
-                        ),
-                      ),
-                     ),
                     Padding(
                       padding: const EdgeInsets.all(10),
                       child: Text(
-                        "This is read, ‘‘The limit of f(x) as x approaches c is L.",
+                        "The limit of f(x) as x approaches c is L.",
                         style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                           fontSize: 15,
                           color: Colors.black,
@@ -169,14 +158,14 @@ class _LearnState extends State<Learn> {
                     ),
                     const Padding(
                       padding: EdgeInsets.all(10),
-                      child: TeXView(
-                        renderingEngine: TeXViewRenderingEngine.mathjax(),
-                        child: TeXViewDocument(
-                          r"""
-                          \lim_{x\to 2} \frac{x^2-4}{x-2}
-                          """,
+                      child: Text(
+                        "f(x) = 1 + 3x",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400,
                         ),
-                      ),
+                      )
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10),
@@ -345,14 +334,14 @@ class _LearnState extends State<Learn> {
                     ),
                     const Padding(
                       padding: EdgeInsets.all(10),
-                      child: TeXView(
-                        renderingEngine: TeXViewRenderingEngine.mathjax(),
-                        child: TeXViewDocument(
-                          r"""
-                          \lim_{x\to 2} \frac{x^2-4}{x-2} = 7
-                          """,
+                      child: Text(
+                        "limx→2(1+3x)=7",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400,
                         ),
-                      ),
+                      )
                     ),
                   ],
                 ),
