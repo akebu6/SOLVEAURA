@@ -63,12 +63,11 @@ class AuthController extends GetxController {
 
         ref.child(value.user!.uid.toString()).set({
           'email': value.user!.email.toString(),
-          'password': password,
+          // 'password': password,
           'UserName': username,
           'Phone': Phone,
           'UserType': Usertype,
         });
-        // Get.offAll(()=>const LoginScreen());
         Get.snackbar("Success", "Sign Up Successfully");
       }).onError((error, stackTrace) {
         if (error.toString().contains("email-already-in-use")) {

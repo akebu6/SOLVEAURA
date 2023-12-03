@@ -224,7 +224,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Text(
-                                      "Welcome to Solveaura. Our app provides a platform for quick response services from police, ambulance, and firefighters in times of Disasters.",
+                                      "Welcome to Solveaura. Our app provides a platform for learning mathematics and testing your knowledge.",
                                       style: TextStyle(
                                           fontSize: 15, fontFamily: 'Roboto'),
                                     ),
